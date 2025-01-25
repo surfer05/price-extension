@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Market Data</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+</head>
+<body>
+  <div class="container">
+    <!-- Tab Header -->
+    <div class="tab-header">
+      <button class="tab-button active" data-coin="ETHUSDT" data-name="Ethereum (ETH)" data-icon="eth_icon.png" tabindex="0">ETH</button>
+      <button class="tab-button" data-coin="BTCUSDT" data-name="Bitcoin (BTC)" data-icon="btc_icon.png" tabindex="0">BTC</button>
+      <button class="tab-button" data-coin="ARBUSDT" data-name="Arbitrum (ARB)" data-icon="arb_icon.png" tabindex="0">ARB</button>
+      <!-- <button class="tab-button" data-coin="OPUSDT" data-name="Optimism (OP)" data-icon="op_icon.png" tabindex="0">OP</button> -->
+      <button class="tab-button" data-coin="STRKUSDT" data-name="Stark (STRK)" data-icon="strk_icon.png" tabindex="0">STRK</button>
+      <button class="tab-button" data-coin="ENAUSDT" data-name="Enya (ENA)" data-icon="ena_icon.png" tabindex="0">ENA</button>
+    </div>
+
+    <!-- Crypto Content -->
+    <div id="crypto-content" class="crypto-card">
+      <div class="card-header">
+        <img src="eth_icon.png" alt="Crypto Icon" id="crypto-icon" class="crypto-icon">
+        <h1 id="crypto-name">Ethereum (ETH)</h1>
+      </div>
+      <div class="card-content">
+        <!-- Current Price -->
+        <div class="section">
+          <h2>Current Price</h2>
+          <div class="data-row">
+            <span class="label">Mark Price:</span>
+            <span id="price" class="value">Loading...</span>
+          </div>
+          <div class="data-row">
+            <span class="label">Funding Rate:</span>
+            <span id="fundingRate" class="value"></span>
+          </div>
+          <div class="data-row">
+            <span class="label">Next Funding:</span>
+            <span id="nextFundingTime" class="value"></span>
+          </div>
+        </div>
+        <!-- 24h Statistics -->
+        <div class="section">
+          <h2>24h Statistics</h2>
+          <div class="data-row">
+            <span class="label">Price Change:</span>
+            <span id="priceChange" class="value"></span>
+          </div>
+          <div class="data-row">
+            <span class="label">24h High:</span>
+            <span id="highPrice" class="value"></span>
+          </div>
+          <div class="data-row">
+            <span class="label">24h Low:</span>
+            <span id="lowPrice" class="value"></span>
+          </div>
+          <div class="data-row">
+            <span class="label">24h Volume:</span>
+            <span id="volume" class="value"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

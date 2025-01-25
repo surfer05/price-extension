@@ -1,0 +1,143 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    width: 340px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+  }
+  
+  .container {
+    padding: 0;
+  }
+  
+  /* Tab Header Styles */
+  .tab-header {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid #bdc3c7;
+    background-color: #bdc3c7;
+  }
+  
+  .tab-button {
+    flex: 1 0 auto;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #bdc3c7;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, font-weight 0.3s, color 0.3s;
+    white-space: nowrap;
+  }
+  
+  .tab-button:hover {
+    background-color: #a5b1b8;
+  }
+  
+  .tab-button.active {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+  }
+  
+  /* Crypto Card Styles */
+  .crypto-card {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #3498db; /* Default accent color */
+  }
+  
+  /* Header Styles */
+  .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .crypto-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .card-header h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  /* Section Styles */
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #34495e;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 5px;
+  }
+  
+  /* Data Row Styles */
+  .data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  
+  .label {
+    font-weight: 500;
+    color: #7f8c8d;
+  }
+  
+  .value {
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .value.positive {
+    color: #27ae60;
+  }
+  
+  .value.negative {
+    color: #e74c3c;
+  }
+  
+  /* Tooltip Styles */
+  [data-tooltip] {
+    position: relative;
+    cursor: help;
+  }
+  
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -5px;
+    right: 105%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    font-size: 12px;
+    z-index: 10;
+  }
+  
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  

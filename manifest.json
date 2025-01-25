@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Ethereum Market Data",
+    "version": "1.4",
+    "description": "Provides live market data of different cryptocurrencies.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "ETH Market Data",
+      "default_icon": {
+        "16": "icon16.png"
+      }
+    },
+    "permissions": [],
+    "host_permissions": [
+      "https://fapi.binance.com/*",
+      "wss://fstream.binance.com/*"
+    ]
+  }
+  
