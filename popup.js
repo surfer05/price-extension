@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nextFundingTimeElement =
           document.getElementById("nextFundingTime");
 
-        const markPrice = parseFloat(data.markPrice).toFixed(4);
+        const markPrice = parseFloat(data.markPrice).toFixed(6);
         const fundingRate = (parseFloat(data.lastFundingRate) * 100).toFixed(4);
         const nextFundingTime = new Date(
           data.nextFundingTime
@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const priceChangePercent = parseFloat(data.priceChangePercent).toFixed(
           4
         );
-        const highPrice = parseFloat(data.highPrice).toFixed(4);
-        const lowPrice = parseFloat(data.lowPrice).toFixed(4);
+        const highPrice = parseFloat(data.highPrice).toFixed(6);
+        const lowPrice = parseFloat(data.lowPrice).toFixed(6);
         const volume = parseFloat(data.volume).toLocaleString();
 
         const isPositive = parseFloat(data.priceChange) >= 0;
@@ -134,26 +134,27 @@ document.addEventListener("DOMContentLoaded", function () {
   updateAccentColor(selectedCoin);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const tabButtons = document.querySelectorAll('.tab-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-button");
   let currentIndex = 0;
 
   // Find the initially active tab (if any)
   tabButtons.forEach((btn, idx) => {
-    if (btn.classList.contains('active')) {
+    if (btn.classList.contains("active")) {
       currentIndex = idx;
     }
   });
 
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener("keydown", (event) => {
     // Check if the Tab key was pressed
-    if (event.key === 'Tab') {
+    if (event.key === "Tab") {
       // Prevent default tab navigation
       event.preventDefault();
 
       // If Shift is held, go backward
       if (event.shiftKey) {
-        currentIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+        currentIndex =
+          (currentIndex - 1 + tabButtons.length) % tabButtons.length;
       } else {
         currentIndex = (currentIndex + 1) % tabButtons.length;
       }
